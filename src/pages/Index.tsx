@@ -37,11 +37,11 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-accent/30 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-background via-secondary/40 to-background" style={{ backgroundImage: 'url(https://cdn.poehali.dev/projects/b606a9e3-1bff-4282-b79d-f92c42f8a03c/files/413edadd-9f26-4cfe-8cd1-263d00ea8153.jpg)', backgroundSize: '400px', backgroundRepeat: 'repeat', backgroundBlendMode: 'soft-light' }}>
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 animate-fade-in">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-primary">Счастливая мама 🎄</h1>
+            <h1 className="text-2xl font-bold text-primary">Счастливая мама</h1>
             <div className="hidden md:flex gap-6">
               {["program", "workshops", "partners", "curling"].map((section) => (
                 <button
@@ -67,11 +67,25 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
-              <Badge className="bg-secondary text-secondary-foreground">30 ноября 2025</Badge>
-              <h2 className="text-5xl md:text-6xl font-bold leading-tight">
-                Счастливая мама<br />
-                <span className="text-primary">в счастливый Новый год</span>
-              </h2>
+              <div className="bg-primary text-primary-foreground px-6 py-3 rounded-lg inline-flex items-center gap-3 font-bold text-xl">
+                <Icon name="MapPin" size={28} />
+                <div className="text-left">
+                  <div className="text-sm opacity-90">Кёрлинг-центр "Дом со льдом"</div>
+                  <div>г. Владивосток, ул. Тюменская, 18</div>
+                </div>
+              </div>
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-4 border-primary">
+                <div className="flex items-center gap-6 mb-4">
+                  <div className="text-7xl font-bold text-primary">30</div>
+                  <div className="text-3xl font-bold text-foreground">ноября</div>
+                  <div className="h-20 w-1 bg-primary"></div>
+                  <div className="text-4xl font-bold text-primary">12:00-17:00</div>
+                </div>
+                <div className="text-xl font-semibold text-muted-foreground mb-2">Фестиваль</div>
+                <h2 className="text-5xl md:text-6xl font-bold leading-tight text-primary">
+                  Счастливая мама
+                </h2>
+              </div>
               <p className="text-lg text-muted-foreground">
                 Праздничный фестиваль для всей семьи с развлечениями, мастер-классами, 
                 призами и уникальной возможностью попробовать кёрлинг!
@@ -86,7 +100,10 @@ const Index = () => {
                   <span>Кёрлинг-центр "Дом со льдом", Тюменская 18</span>
                 </div>
               </div>
-              <Button size="lg" className="text-lg px-8" onClick={() => scrollToSection("program")}>
+              <div className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-bold text-2xl text-center">
+                ВХОД СВОБОДНЫЙ
+              </div>
+              <Button size="lg" className="text-lg px-8 bg-white text-primary hover:bg-white/90 border-2 border-primary" onClick={() => scrollToSection("program")}>
                 Смотреть программу
                 <Icon name="ArrowRight" className="ml-2" size={20} />
               </Button>
@@ -102,7 +119,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="program" className="py-16 px-4 bg-muted/50">
+      <section id="program" className="py-16 px-4 bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold mb-4">Программа фестиваля</h3>
@@ -130,7 +147,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="workshops" className="py-16 px-4">
+      <section id="workshops" className="py-16 px-4 bg-white/60 backdrop-blur-sm">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold mb-4">Творческие мастерские</h3>
@@ -157,7 +174,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="curling" className="py-16 px-4 bg-gradient-to-r from-primary/10 to-accent">
+      <section id="curling" className="py-16 px-4 bg-gradient-to-r from-primary/20 to-secondary/60 backdrop-blur-sm">
         <div className="container mx-auto max-w-4xl">
           <Card className="overflow-hidden">
             <CardContent className="p-8 md:p-12">
@@ -181,7 +198,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="partners" className="py-16 px-4">
+      <section id="partners" className="py-16 px-4 bg-white/60 backdrop-blur-sm">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold mb-4">Партнеры со скидками</h3>
@@ -212,7 +229,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-muted/50">
+      <section className="py-16 px-4 bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-2xl p-12">
             <Icon name="ShoppingBag" className="mx-auto mb-6" size={64} />
@@ -282,7 +299,7 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-primary text-primary-foreground py-8 px-4">
+      <footer className="bg-primary text-primary-foreground py-12 px-4">
         <div className="container mx-auto text-center">
           <h3 className="text-2xl font-bold mb-2">До встречи на фестивале!</h3>
           <p className="opacity-90">Счастливая мама в счастливый Новый год 🎄✨</p>
