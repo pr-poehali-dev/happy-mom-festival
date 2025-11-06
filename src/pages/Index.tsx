@@ -166,10 +166,6 @@ const Index = () => {
             <h3 className="text-5xl font-bold mb-6 text-primary">О фестивале</h3>
             <div className="bg-white rounded-3xl p-10 shadow-xl border-4 border-primary/20">
               <div className="space-y-6 text-lg leading-relaxed text-foreground">
-                <p className="text-2xl font-semibold text-primary mb-6">
-                  Фестиваль, созданный с любовью для мам и их семей!
-                </p>
-                
                 <p>
                   Наш фестиваль объединил два важных события — <strong className="text-primary">День матери</strong> и <strong className="text-primary">подготовку к Новому году</strong>. 
                   В центре семейного наследия мы знаем, что самое важное время, требующее внимания и активного участия родителей, — это Новый год.
