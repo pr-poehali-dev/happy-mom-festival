@@ -2,11 +2,29 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
 
 const Index = () => {
+  const [snowflakes, setSnowflakes] = useState<{ id: number; x: number; y: number }[]>([]);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const createSnowflakes = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const newSnowflakes = Array.from({ length: 8 }, (_, i) => ({
+      id: Date.now() + i,
+      x: rect.left + Math.random() * rect.width,
+      y: rect.top,
+    }));
+    
+    setSnowflakes((prev) => [...prev, ...newSnowflakes]);
+    
+    setTimeout(() => {
+      setSnowflakes((prev) => prev.filter((s) => !newSnowflakes.find((ns) => ns.id === s.id)));
+    }, 2000);
   };
 
   const partners = [
@@ -27,13 +45,14 @@ const Index = () => {
     { icon: "Music", title: "Детская дискотека", time: "16:00 - 17:00" }
   ];
 
-  const program = [
-    { time: "12:00", event: "Открытие фестиваля", desc: "Приветствие гостей, начало работы площадок" },
-    { time: "12:30", event: "Конкурсы с ведущим", desc: "Интерактивная программа с призами" },
-    { time: "13:00", event: "Мастерские", desc: "Творческие активности для всей семьи" },
-    { time: "14:00", event: "Розыгрыш призов", desc: "Главный розыгрыш от партнеров" },
-    { time: "15:00", event: "Кёрлинг-тренировка", desc: "Уникальная возможность бесплатно попробовать кёрлинг" },
-    { time: "16:30", event: "Финальный концерт", desc: "Праздничное выступление артистов" }
+  const programActivities = [
+    { icon: "PartyPopper", title: "Развлекательная программа" },
+    { icon: "Award", title: "Конкурсы" },
+    { icon: "Palette", title: "Творческие мастерские" },
+    { icon: "Sparkles", title: "Бьюти зона для мам" },
+    { icon: "Baby", title: "Детская зона" },
+    { icon: "ShoppingBag", title: "Предновогодний маркет" },
+    { icon: "Gift", title: "Розыгрыши призов от партнеров" }
   ];
 
   return (
@@ -134,29 +153,43 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="program" className="py-16 px-4 bg-white/80 backdrop-blur-sm">
+      <section id="program" className="py-16 px-4 bg-white/80 backdrop-blur-sm relative">
+        {snowflakes.map((flake) => (
+          <div
+            key={flake.id}
+            className="snowflake"
+            style={{ left: `${flake.x}px`, top: `${flake.y}px` }}
+          >
+            ❄️
+          </div>
+        ))}
+        
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4">Программа фестиваля</h3>
+            <h3 className="text-4xl font-bold mb-4 text-primary">Программа фестиваля</h3>
+            <p className="text-2xl font-semibold text-foreground mb-4">
+              Приходите всей семьёй на незабываемый праздник!
+            </p>
             <p className="text-lg text-muted-foreground">
-              Насыщенный день развлечений, конкурсов и творчества
+              Вас ждёт насыщенный день развлечений, творчества и праздничного настроения
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {program.map((item, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all hover:scale-105">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-primary text-primary-foreground rounded-lg px-4 py-2 font-bold text-lg shrink-0">
-                      {item.time}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg mb-2">{item.event}</h4>
-                      <p className="text-sm text-muted-foreground">{item.desc}</p>
-                    </div>
+          
+          <div className="max-w-4xl mx-auto space-y-4">
+            {programActivities.map((activity, index) => (
+              <button
+                key={index}
+                onMouseEnter={createSnowflakes}
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-xl font-bold text-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-between group"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="bg-white/20 p-3 rounded-lg group-hover:bg-white/30 transition-colors">
+                    <Icon name={activity.icon as any} size={32} />
                   </div>
-                </CardContent>
-              </Card>
+                  <span>{activity.title}</span>
+                </div>
+                <Icon name="ChevronRight" size={32} className="group-hover:translate-x-2 transition-transform" />
+              </button>
             ))}
           </div>
         </div>

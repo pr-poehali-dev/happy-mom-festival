@@ -111,3 +111,30 @@
     font-family: "Montserrat", sans-serif;
   }
 }
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10px) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px) translateX(20px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.snowflake {
+  position: absolute;
+  color: white;
+  font-size: 1.5rem;
+  user-select: none;
+  pointer-events: none;
+  animation: snowfall 2s ease-out forwards;
+  z-index: 10;
+}
