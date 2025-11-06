@@ -62,12 +62,13 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold text-primary">Счастливая мама</h1>
             <div className="hidden md:flex gap-6">
-              {["program", "workshops", "partners", "curling"].map((section) => (
+              {["about", "program", "workshops", "partners", "curling"].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
                   className="text-sm font-medium hover:text-primary transition-colors"
                 >
+                  {section === "about" && "О фестивале"}
                   {section === "program" && "Программа"}
                   {section === "workshops" && "Мастерские"}
                   {section === "partners" && "Партнеры"}
@@ -166,7 +167,7 @@ const Index = () => {
             <div className="bg-white rounded-3xl p-10 shadow-xl border-4 border-primary/20">
               <div className="space-y-6 text-lg leading-relaxed text-foreground">
                 <p className="text-2xl font-semibold text-primary mb-6">
-                  💝 Фестиваль, созданный с любовью для мам и их семей!
+                  Фестиваль, созданный с любовью для мам и их семей!
                 </p>
                 
                 <p>
@@ -176,7 +177,7 @@ const Index = () => {
                 
                 <div className="bg-accent/40 rounded-2xl p-8 my-8">
                   <p className="text-xl font-semibold text-primary mb-4">
-                    🎯 Наша цель:
+                    Наша цель:
                   </p>
                   <p>
                     Наполнить мам счастьем в преддверии Нового года, дать возможность отдохнуть, провести время с пользой 
@@ -216,7 +217,7 @@ const Index = () => {
                 </div>
 
                 <p className="text-xl text-center font-semibold text-primary pt-6">
-                  ✨ Ждём вас и вашу семью на тёплом празднике, полном радости и творчества! ✨
+                  Ждём вас и вашу семью на тёплом празднике, полном радости и творчества!
                 </p>
               </div>
             </div>
