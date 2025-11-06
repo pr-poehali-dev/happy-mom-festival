@@ -2,10 +2,24 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { Badge } from "@/components/ui/badge";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Index = () => {
   const [snowflakes, setSnowflakes] = useState<{ id: number; x: number; y: number }[]>([]);
+  const [daysLeft, setDaysLeft] = useState(0);
+
+  useEffect(() => {
+    const festivalDate = new Date('2024-11-30').getTime();
+    const updateCounter = () => {
+      const now = new Date().getTime();
+      const distance = festivalDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      setDaysLeft(days > 0 ? days : 0);
+    };
+    updateCounter();
+    const interval = setInterval(updateCounter, 1000 * 60 * 60);
+    return () => clearInterval(interval);
+  }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -148,6 +162,18 @@ const Index = () => {
                 <div className="text-5xl font-bold text-primary">12:00-17:00</div>
               </div>
               
+              <div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl p-6 mb-8 border-2 border-primary/30">
+                <div className="text-center">
+                  <div className="text-lg font-semibold text-muted-foreground mb-2">До фестиваля осталось</div>
+                  <div className="flex items-center justify-center gap-4">
+                    <div className="bg-primary text-primary-foreground rounded-xl px-8 py-4">
+                      <div className="text-5xl font-bold">{daysLeft}</div>
+                      <div className="text-sm mt-1 opacity-90">{daysLeft === 1 ? 'день' : daysLeft < 5 ? 'дня' : 'дней'}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="text-2xl font-semibold text-muted-foreground mb-4 text-center">Фестиваль</div>
               <h2 className="text-6xl md:text-7xl font-bold leading-tight text-primary text-center mb-8">
                 Счастливая мама
