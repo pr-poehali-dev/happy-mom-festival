@@ -223,23 +223,76 @@ const Index = () => {
       </section>
 
       <section id="curling" className="py-16 px-4 bg-gradient-to-r from-primary/20 to-secondary/60 backdrop-blur-sm">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-5xl">
           <Card className="overflow-hidden">
             <CardContent className="p-8 md:p-12">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center shrink-0">
-                  <Icon name="Trophy" className="text-primary-foreground" size={48} />
+              <div className="text-center mb-8">
+                <div className="w-32 h-32 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Icon name="Trophy" className="text-primary-foreground" size={64} />
                 </div>
-                <div className="text-center md:text-left">
-                  <h3 className="text-3xl font-bold mb-4">Бесплатная кёрлинг-тренировка!</h3>
-                  <p className="text-lg text-muted-foreground mb-4">
-                    Уникальная возможность попробовать настоящий кёрлинг под руководством профессиональных тренеров.
-                    Для всех желающих - бесплатно!
+                <h3 className="text-4xl font-bold mb-6 text-primary">Бесплатная кёрлинг-тренировка!</h3>
+                
+                <div className="bg-accent/30 rounded-xl p-6 mb-6 text-left">
+                  <h4 className="text-2xl font-bold mb-3 text-primary">Что такое кёрлинг?</h4>
+                  <p className="text-lg text-foreground mb-4">
+                    Кёрлинг — это зимняя командная игра на льду, где участники запускают специальные камни 
+                    весом 20 кг по ледяной площадке к цели. Это спорт, требующий точности, стратегии и командной работы. 
+                    Увлекательно для всех возрастов!
                   </p>
-                  <Badge className="bg-secondary text-secondary-foreground text-base px-4 py-2">
-                    15:00 - Запись на месте
-                  </Badge>
+                  <p className="text-base text-muted-foreground">
+                    Подробнее о центре:{" "}
+                    <a 
+                      href="https://domsoldom.ru/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary font-semibold hover:underline"
+                    >
+                      domsoldom.ru
+                    </a>
+                  </p>
                 </div>
+
+                <div className="bg-white rounded-xl p-6 mb-6 border-2 border-primary">
+                  <div className="grid md:grid-cols-2 gap-6 text-left">
+                    <div>
+                      <div className="flex items-start gap-3 mb-3">
+                        <Icon name="Clock" className="text-primary mt-1" size={24} />
+                        <div>
+                          <h5 className="font-bold text-lg mb-1">Расписание</h5>
+                          <p className="text-muted-foreground">Тренировки каждый час в течение фестиваля</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Users" className="text-primary mt-1" size={24} />
+                        <div>
+                          <h5 className="font-bold text-lg mb-1">Группы</h5>
+                          <p className="text-muted-foreground">До 10 человек на одну тренировку</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Footprints" className="text-primary mt-1" size={24} />
+                        <div>
+                          <h5 className="font-bold text-lg mb-1">Важно!</h5>
+                          <p className="text-muted-foreground">С собой обязательно возьмите <strong className="text-primary">сменную обувь</strong></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <Button 
+                  size="lg" 
+                  className="text-xl px-12 py-6 bg-primary hover:bg-primary/90 text-primary-foreground"
+                  onClick={() => window.open('https://t.me/fahece_bot', '_blank')}
+                >
+                  <Icon name="Send" className="mr-3" size={24} />
+                  Записаться на тренировку
+                </Button>
+                <p className="text-sm text-muted-foreground mt-3">
+                  Запись через Telegram-бота
+                </p>
               </div>
             </CardContent>
           </Card>
