@@ -46,13 +46,41 @@ const Index = () => {
   ];
 
   const programActivities = [
-    { icon: "PartyPopper", title: "Развлекательная программа" },
-    { icon: "Award", title: "Конкурсы" },
-    { icon: "Palette", title: "Творческие мастерские" },
-    { icon: "Sparkles", title: "Бьюти зона для мам" },
-    { icon: "Baby", title: "Детская зона" },
-    { icon: "ShoppingBag", title: "Предновогодний маркет" },
-    { icon: "Gift", title: "Розыгрыши призов от партнеров" }
+    { 
+      icon: "PartyPopper", 
+      title: "Развлекательная программа",
+      description: "Яркое шоу с участием талантливого ведущего наполнит зал атмосферой волшебства. Концертные номера и перфоманс-спектакль подарят незабываемые впечатления, а показ новогодней коллекции одежды вдохновит на праздничные образы. В просторных зонах зала расположены творческие мастерские и игровые площадки, где каждый найдет занятие по душе. Каждый час проходит тренировка по кёрлингу для группы до 10 человек. Предварительная запись обязательна."
+    },
+    { 
+      icon: "Award", 
+      title: "Конкурсы",
+      description: "Захватывающие конкурсы от ведущего, увлекательный квест с заданиями для всей семьи и беспроигрышная лотерея создадут атмосферу азарта и радости. Спонсорские призы и подарки станут приятным завершением каждого состязания."
+    },
+    { 
+      icon: "Palette", 
+      title: "Творческие мастерские",
+      description: "Пространство, где рождается волшебство ручной работы. Дети смогут создать трогательный подарок для самого дорогого человека — мамы. Здесь каждый откроет в себе новые таланты и попробует то, о чём давно мечтал."
+    },
+    { 
+      icon: "Sparkles", 
+      title: "Бьюти зона для мам",
+      description: "Именно мамы наполняют дом уютом, теплом и создают ту самую атмосферу праздника. Мы позаботились о том, чтобы их силы были восполнены. В бьюти зоне профессиональные визажисты подарят каждой маме преображение, подчеркнув её естественную красоту и обаяние."
+    },
+    { 
+      icon: "Baby", 
+      title: "Детская зона",
+      description: "Заботливые аниматоры и педагоги окружат детей вниманием и создадут для них увлекательную программу. Пока малыши заняты играми и творчеством под присмотром профессионалов, мамы смогут насладиться заслуженным отдыхом."
+    },
+    { 
+      icon: "ShoppingBag", 
+      title: "Предновогодний маркет",
+      description: "Партнёры фестиваля — талантливые мастера и проверенные компании — представят изделия и товары, которые помогут создать неповторимую атмосферу праздника в вашем доме."
+    },
+    { 
+      icon: "Gift", 
+      title: "Розыгрыши призов от партнёров",
+      description: "Удача обязательно улыбнётся вам на фестивале. Участвуйте в розыгрышах и беспроигрышных лотереях. А помните ли вы, что уже стали обладателем ценного подарка — чек-листа со скидками от партнёров на всё необходимое к Новому году."
+    }
   ];
 
   return (
@@ -245,19 +273,27 @@ const Index = () => {
           
           <div className="max-w-4xl mx-auto space-y-4">
             {programActivities.map((activity, index) => (
-              <button
-                key={index}
-                onMouseEnter={createSnowflakes}
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-xl font-bold text-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-between group"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="bg-white/20 p-3 rounded-lg group-hover:bg-white/30 transition-colors">
-                    <Icon name={activity.icon as any} size={32} />
+              <div key={index} className="group">
+                <button
+                  onMouseEnter={createSnowflakes}
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-xl font-bold text-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-between"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="bg-white/20 p-3 rounded-lg group-hover:bg-white/30 transition-colors">
+                      <Icon name={activity.icon as any} size={32} />
+                    </div>
+                    <span>{activity.title}</span>
                   </div>
-                  <span>{activity.title}</span>
+                  <Icon name="ChevronDown" size={32} className="group-hover:translate-y-1 transition-transform" />
+                </button>
+                <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 max-h-0 group-hover:max-h-96 overflow-hidden">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-b-xl px-8 py-6 -mt-2 shadow-lg border-2 border-primary/20">
+                    <p className="text-foreground text-base leading-relaxed">
+                      {activity.description}
+                    </p>
+                  </div>
                 </div>
-                <Icon name="ChevronRight" size={32} className="group-hover:translate-x-2 transition-transform" />
-              </button>
+              </div>
             ))}
           </div>
         </div>
