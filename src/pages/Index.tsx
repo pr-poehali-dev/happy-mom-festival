@@ -37,12 +37,11 @@ const Index = () => {
   ];
 
   const workshops = [
-    { icon: "Palette", title: "Роспись елочных игрушек", time: "12:30 - 13:30" },
-    { icon: "Cookie", title: "Мастер-класс по пряникам", time: "13:00 - 14:00" },
-    { icon: "Sparkles", title: "Создание новогодних венков", time: "14:00 - 15:00" },
-    { icon: "Gift", title: "Упаковка подарков", time: "15:00 - 16:00" },
-    { icon: "Heart", title: "Бьюти-зона для мам", time: "12:00 - 17:00" },
-    { icon: "Music", title: "Детская дискотека", time: "16:00 - 17:00" }
+    { icon: "Box", title: "3D картина", time: "12:00 - 17:00" },
+    { icon: "Sparkles", title: "Ёлочная игрушка", time: "12:00 - 17:00" },
+    { icon: "Waves", title: "Нейрографика", time: "12:00 - 17:00" },
+    { icon: "Scissors", title: "Вязание", time: "12:00 - 17:00" },
+    { icon: "Users", title: "Семейный", time: "12:00 - 17:00" }
   ];
 
   const programActivities = [
