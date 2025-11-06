@@ -142,11 +142,82 @@ const Index = () => {
                 ВХОД СВОБОДНЫЙ
               </div>
 
-              <div className="text-center">
-                <Button size="lg" className="text-xl px-12 py-6 bg-white text-primary hover:bg-white/90 border-4 border-primary" onClick={() => scrollToSection("program")}>
-                  Смотреть программу
-                  <Icon name="ArrowRight" className="ml-2" size={24} />
+              <div className="text-center space-y-4">
+                <Button size="lg" className="text-xl px-12 py-6 bg-white text-primary hover:bg-white/90 border-4 border-primary" onClick={() => scrollToSection("about")}>
+                  Узнать больше о фестивале
+                  <Icon name="Heart" className="ml-2" size={24} />
                 </Button>
+                <div>
+                  <Button size="lg" variant="outline" className="text-xl px-12 py-6 border-4 border-white text-white hover:bg-white/20" onClick={() => scrollToSection("program")}>
+                    Смотреть программу
+                    <Icon name="ArrowRight" className="ml-2" size={24} />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="py-16 px-4 bg-gradient-to-b from-primary/10 to-white/80 backdrop-blur-sm">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <h3 className="text-5xl font-bold mb-6 text-primary">О фестивале</h3>
+            <div className="bg-white rounded-3xl p-10 shadow-xl border-4 border-primary/20">
+              <div className="space-y-6 text-lg leading-relaxed text-foreground">
+                <p className="text-2xl font-semibold text-primary mb-6">
+                  💝 Фестиваль, созданный с любовью для мам и их семей!
+                </p>
+                
+                <p>
+                  Наш фестиваль объединил два важных события — <strong className="text-primary">День матери</strong> и <strong className="text-primary">подготовку к Новому году</strong>. 
+                  В центре семейного наследия мы знаем, что самое важное время, требующее внимания и активного участия родителей, — это Новый год.
+                </p>
+                
+                <div className="bg-accent/40 rounded-2xl p-8 my-8">
+                  <p className="text-xl font-semibold text-primary mb-4">
+                    🎯 Наша цель:
+                  </p>
+                  <p>
+                    Наполнить мам счастьем в преддверии Нового года, дать возможность отдохнуть, провести время с пользой 
+                    и получить заряд праздничного настроения!
+                  </p>
+                </div>
+
+                <p>
+                  На фестивале вы сможете попробовать что-то впервые: разрисовать <strong>семейную ёлочную игрушку</strong>, 
+                  нарисовать <strong>нейрографику</strong>, создать <strong>3D-картину</strong>, научиться <strong>вязать</strong> и многое другое!
+                </p>
+
+                <div className="grid md:grid-cols-3 gap-6 my-8">
+                  <div className="bg-primary/10 rounded-xl p-6 text-center">
+                    <Icon name="Gift" className="mx-auto mb-3 text-primary" size={40} />
+                    <h4 className="font-bold text-lg mb-2">Призы</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Партнеры фестиваля подготовили призы, которые будут разыграны между участниками
+                    </p>
+                  </div>
+                  
+                  <div className="bg-primary/10 rounded-xl p-6 text-center">
+                    <Icon name="ShoppingBag" className="mx-auto mb-3 text-primary" size={40} />
+                    <h4 className="font-bold text-lg mb-2">Маркет</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Найдите уникальные предметы, которые украсят ваш дом к Новому году
+                    </p>
+                  </div>
+                  
+                  <div className="bg-primary/10 rounded-xl p-6 text-center">
+                    <Icon name="BadgePercent" className="mx-auto mb-3 text-primary" size={40} />
+                    <h4 className="font-bold text-lg mb-2">Скидки</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Специальный чек-лист со скидками от партнёров на всё, что нужно к празднику
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-xl text-center font-semibold text-primary pt-6">
+                  ✨ Ждём вас и вашу семью на тёплом празднике, полном радости и творчества! ✨
+                </p>
               </div>
             </div>
           </div>
