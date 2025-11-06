@@ -9,11 +9,11 @@ const Index = () => {
   const [daysLeft, setDaysLeft] = useState(0);
 
   useEffect(() => {
-    const festivalDate = new Date('2024-11-30').getTime();
+    const festivalDate = new Date('2025-11-30T00:00:00');
     const updateCounter = () => {
-      const now = new Date().getTime();
-      const distance = festivalDate - now;
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const now = new Date();
+      const distance = festivalDate.getTime() - now.getTime();
+      const days = Math.ceil(distance / (1000 * 60 * 60 * 24));
       setDaysLeft(days > 0 ? days : 0);
     };
     updateCounter();
