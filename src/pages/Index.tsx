@@ -63,57 +63,72 @@ const Index = () => {
         </div>
       </nav>
 
-      <section className="pt-24 pb-16 px-4">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in">
-              <div className="bg-primary text-primary-foreground px-6 py-3 rounded-lg inline-flex items-center gap-3 font-bold text-xl">
-                <Icon name="MapPin" size={28} />
-                <div className="text-left">
-                  <div className="text-sm opacity-90">Кёрлинг-центр "Дом со льдом"</div>
-                  <div>г. Владивосток, ул. Тюменская, 18</div>
-                </div>
+      <section className="pt-24 pb-16 px-4 relative overflow-hidden">
+        <div 
+          className="absolute left-0 top-0 bottom-0 w-1/5 opacity-40"
+          style={{ 
+            backgroundImage: 'url(https://cdn.poehali.dev/projects/b606a9e3-1bff-4282-b79d-f92c42f8a03c/files/413edadd-9f26-4cfe-8cd1-263d00ea8153.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+        <div 
+          className="absolute right-0 top-0 bottom-0 w-1/5 opacity-40"
+          style={{ 
+            backgroundImage: 'url(https://cdn.poehali.dev/projects/b606a9e3-1bff-4282-b79d-f92c42f8a03c/files/413edadd-9f26-4cfe-8cd1-263d00ea8153.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+        
+        <div className="container mx-auto relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-primary text-primary-foreground px-6 py-3 rounded-lg inline-flex items-center gap-3 font-bold text-xl mb-8 animate-fade-in">
+              <Icon name="MapPin" size={28} />
+              <div className="text-left">
+                <div className="text-sm opacity-90">Кёрлинг-центр "Дом со льдом"</div>
+                <div>г. Владивосток, ул. Тюменская, 18</div>
               </div>
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-4 border-primary">
-                <div className="flex items-center gap-6 mb-4">
-                  <div className="text-7xl font-bold text-primary">30</div>
-                  <div className="text-3xl font-bold text-foreground">ноября</div>
-                  <div className="h-20 w-1 bg-primary"></div>
-                  <div className="text-4xl font-bold text-primary">12:00-17:00</div>
+            </div>
+
+            <div className="bg-white rounded-3xl p-12 shadow-2xl border-8 border-primary animate-scale-in">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-8">
+                <div className="flex items-center gap-8">
+                  <div className="text-8xl font-bold text-primary">30</div>
+                  <div className="text-4xl font-bold text-foreground">ноября</div>
                 </div>
-                <div className="text-xl font-semibold text-muted-foreground mb-2">Фестиваль</div>
-                <h2 className="text-5xl md:text-6xl font-bold leading-tight text-primary">
-                  Счастливая мама
-                </h2>
+                <div className="hidden md:block h-24 w-1 bg-primary"></div>
+                <div className="text-5xl font-bold text-primary">12:00-17:00</div>
               </div>
-              <p className="text-lg text-muted-foreground">
+              
+              <div className="text-2xl font-semibold text-muted-foreground mb-4 text-center">Фестиваль</div>
+              <h2 className="text-6xl md:text-7xl font-bold leading-tight text-primary text-center mb-8">
+                Счастливая мама
+              </h2>
+
+              <div className="mb-8">
+                <img 
+                  src="https://cdn.poehali.dev/files/230007ae-df78-4ae7-8ab7-866077744bd6.png"
+                  alt="Счастливая семья"
+                  className="w-full max-w-2xl mx-auto rounded-2xl shadow-lg border-4 border-primary/20"
+                />
+              </div>
+
+              <p className="text-xl text-center text-muted-foreground mb-8 max-w-3xl mx-auto">
                 Праздничный фестиваль для всей семьи с развлечениями, мастер-классами, 
                 призами и уникальной возможностью попробовать кёрлинг!
               </p>
-              <div className="flex flex-col gap-3">
-                <div className="flex items-center gap-3 text-lg">
-                  <Icon name="Clock" className="text-primary" size={24} />
-                  <span>12:00 - 17:00</span>
-                </div>
-                <div className="flex items-center gap-3 text-lg">
-                  <Icon name="MapPin" className="text-primary" size={24} />
-                  <span>Кёрлинг-центр "Дом со льдом", Тюменская 18</span>
-                </div>
-              </div>
-              <div className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-bold text-2xl text-center">
+
+              <div className="bg-primary text-primary-foreground px-8 py-5 rounded-xl font-bold text-3xl text-center mb-6">
                 ВХОД СВОБОДНЫЙ
               </div>
-              <Button size="lg" className="text-lg px-8 bg-white text-primary hover:bg-white/90 border-2 border-primary" onClick={() => scrollToSection("program")}>
-                Смотреть программу
-                <Icon name="ArrowRight" className="ml-2" size={20} />
-              </Button>
-            </div>
-            <div className="animate-scale-in">
-              <img 
-                src="https://cdn.poehali.dev/files/44425aa2-26e0-432a-9fb3-45f85e5abde6.jpeg"
-                alt="Счастливая мама"
-                className="rounded-2xl shadow-2xl w-full object-cover"
-              />
+
+              <div className="text-center">
+                <Button size="lg" className="text-xl px-12 py-6 bg-white text-primary hover:bg-white/90 border-4 border-primary" onClick={() => scrollToSection("program")}>
+                  Смотреть программу
+                  <Icon name="ArrowRight" className="ml-2" size={24} />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
