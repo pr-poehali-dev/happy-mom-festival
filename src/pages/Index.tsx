@@ -152,30 +152,30 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl p-12 shadow-2xl border-8 border-primary animate-scale-in">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-8">
-                <div className="flex items-center gap-8">
-                  <div className="text-8xl font-bold text-primary">30</div>
-                  <div className="text-4xl font-bold text-foreground">ноября</div>
+            <div className="bg-white rounded-3xl p-6 md:p-12 shadow-2xl border-8 border-primary animate-scale-in">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 mb-6 md:mb-8">
+                <div className="flex items-center gap-4 md:gap-8">
+                  <div className="text-5xl md:text-8xl font-bold text-primary">30</div>
+                  <div className="text-2xl md:text-4xl font-bold text-foreground">ноября</div>
                 </div>
                 <div className="hidden md:block h-24 w-1 bg-primary"></div>
-                <div className="text-5xl font-bold text-primary">12:00-17:00</div>
+                <div className="text-3xl md:text-5xl font-bold text-primary">12:00-17:00</div>
               </div>
               
-              <div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl p-6 mb-8 border-2 border-primary/30">
+              <div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl p-4 md:p-6 mb-6 md:mb-8 border-2 border-primary/30">
                 <div className="text-center">
-                  <div className="text-lg font-semibold text-muted-foreground mb-2">До фестиваля осталось</div>
+                  <div className="text-base md:text-lg font-semibold text-muted-foreground mb-2">До фестиваля осталось</div>
                   <div className="flex items-center justify-center gap-4">
-                    <div className="bg-primary text-primary-foreground rounded-xl px-8 py-4">
-                      <div className="text-5xl font-bold">{daysLeft}</div>
-                      <div className="text-sm mt-1 opacity-90">{daysLeft === 1 ? 'день' : daysLeft < 5 ? 'дня' : 'дней'}</div>
+                    <div className="bg-primary text-primary-foreground rounded-xl px-6 md:px-8 py-3 md:py-4">
+                      <div className="text-4xl md:text-5xl font-bold">{daysLeft}</div>
+                      <div className="text-xs md:text-sm mt-1 opacity-90">{daysLeft === 1 ? 'день' : daysLeft < 5 ? 'дня' : 'дней'}</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="text-2xl font-semibold text-muted-foreground mb-4 text-center">Фестиваль</div>
-              <h2 className="text-6xl md:text-7xl font-bold leading-tight text-primary text-center mb-8">
+              <div className="text-xl md:text-2xl font-semibold text-muted-foreground mb-3 md:mb-4 text-center">Фестиваль</div>
+              <h2 className="text-4xl md:text-7xl font-bold leading-tight text-primary text-center mb-6 md:mb-8">
                 Счастливая мама
               </h2>
 
@@ -192,21 +192,19 @@ const Index = () => {
                 призами и уникальной возможностью попробовать кёрлинг!
               </p>
 
-              <div className="bg-primary text-primary-foreground px-8 py-5 rounded-xl font-bold text-3xl text-center mb-6">
+              <div className="bg-primary text-primary-foreground px-6 md:px-8 py-4 md:py-5 rounded-xl font-bold text-xl md:text-3xl text-center mb-6">
                 ВХОД СВОБОДНЫЙ
               </div>
 
-              <div className="text-center space-y-4">
-                <Button size="lg" className="text-xl px-12 py-6 bg-white text-primary hover:bg-white/90 border-4 border-primary" onClick={() => scrollToSection("about")}>
+              <div className="flex flex-col items-start md:items-center gap-3 md:gap-4">
+                <Button size="lg" className="text-base md:text-xl px-6 md:px-12 py-4 md:py-6 bg-white text-primary hover:bg-white/90 border-4 border-primary w-auto" onClick={() => scrollToSection("about")}>
                   Узнать больше о фестивале
-                  <Icon name="Heart" className="ml-2" size={24} />
+                  <Icon name="Heart" className="ml-2" size={20} />
                 </Button>
-                <div>
-                  <Button size="lg" variant="outline" className="text-xl px-12 py-6 border-4 border-white text-white hover:bg-white/20" onClick={() => scrollToSection("program")}>
-                    Смотреть программу
-                    <Icon name="ArrowRight" className="ml-2" size={24} />
-                  </Button>
-                </div>
+                <Button size="lg" variant="outline" className="text-base md:text-xl px-6 md:px-12 py-4 md:py-6 border-4 border-white text-white hover:bg-white/20 w-auto" onClick={() => scrollToSection("program")}>
+                  Смотреть программу
+                  <Icon name="ArrowRight" className="ml-2" size={20} />
+                </Button>
               </div>
             </div>
           </div>
@@ -411,14 +409,16 @@ const Index = () => {
                   </div>
                 </div>
 
-                <Button 
-                  size="lg" 
-                  className="text-xl px-12 py-6 bg-primary hover:bg-primary/90 text-primary-foreground"
-                  onClick={() => window.open('https://t.me/fahece_bot', '_blank')}
-                >
-                  <Icon name="Send" className="mr-3" size={24} />
-                  Записаться на тренировку
-                </Button>
+                <div className="flex justify-start">
+                  <Button 
+                    size="lg" 
+                    className="text-base md:text-xl px-6 md:px-12 py-4 md:py-6 bg-primary hover:bg-primary/90 text-primary-foreground w-auto"
+                    onClick={() => window.open('https://t.me/fahece_bot', '_blank')}
+                  >
+                    <Icon name="Send" className="mr-2 md:mr-3" size={20} />
+                    Записаться на тренировку
+                  </Button>
+                </div>
                 <p className="text-sm text-muted-foreground mt-3">
                   Запись через Telegram-бота
                 </p>
