@@ -299,15 +299,15 @@ const Index = () => {
               <div key={index} className="group">
                 <button
                   onMouseEnter={createSnowflakes}
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 rounded-xl font-bold text-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-between"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-4 md:px-8 py-4 md:py-6 rounded-xl font-bold text-base md:text-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-between"
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="bg-white/20 p-3 rounded-lg group-hover:bg-white/30 transition-colors">
-                      <Icon name={activity.icon as any} size={32} />
+                  <div className="flex items-center gap-2 md:gap-4">
+                    <div className="bg-white/20 p-2 md:p-3 rounded-lg group-hover:bg-white/30 transition-colors">
+                      <Icon name={activity.icon as any} size={24} className="md:w-8 md:h-8" />
                     </div>
-                    <span>{activity.title}</span>
+                    <span className="text-left">{activity.title}</span>
                   </div>
-                  <Icon name="ChevronDown" size={32} className="group-hover:translate-y-1 transition-transform" />
+                  <Icon name="ChevronDown" size={24} className="group-hover:translate-y-1 transition-transform md:w-8 md:h-8" />
                 </button>
                 <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 max-h-0 group-hover:max-h-96 overflow-hidden">
                   <div className="bg-white/95 backdrop-blur-sm rounded-b-xl px-8 py-6 -mt-2 shadow-lg border-2 border-primary/20">
@@ -412,11 +412,11 @@ const Index = () => {
                 <div className="flex justify-start">
                   <Button 
                     size="lg" 
-                    className="text-base md:text-xl px-6 md:px-12 py-4 md:py-6 bg-primary hover:bg-primary/90 text-primary-foreground w-auto"
+                    className="text-sm md:text-xl px-4 md:px-12 py-3 md:py-6 bg-primary hover:bg-primary/90 text-primary-foreground w-auto"
                     onClick={() => window.open('https://t.me/fahece_bot', '_blank')}
                   >
-                    <Icon name="Send" className="mr-2 md:mr-3" size={20} />
-                    Записаться на тренировку
+                    <Icon name="Send" className="mr-2 md:mr-3" size={18} />
+                    <span className="whitespace-nowrap">Записаться на тренировку</span>
                   </Button>
                 </div>
                 <p className="text-sm text-muted-foreground mt-3">
@@ -463,12 +463,12 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <div className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-2xl p-12">
             <Icon name="ShoppingBag" className="mx-auto mb-6" size={64} />
-            <h3 className="text-3xl font-bold mb-4">Предновогодний маркет</h3>
-            <p className="text-lg mb-6 opacity-90">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Предновогодний маркет</h3>
+            <p className="text-base md:text-lg mb-6 opacity-90">
               Уникальные подарки, украшения ручной работы, сладости и всё для праздничного настроения.
               Поддержите местных мастеров и найдите особенные подарки!
             </p>
-            <Badge className="bg-white text-primary text-base px-6 py-3">
+            <Badge className="bg-white text-primary text-sm md:text-base px-4 md:px-6 py-2 md:py-3">
               Работает весь день 12:00 - 17:00
             </Badge>
           </div>
@@ -479,7 +479,7 @@ const Index = () => {
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold mb-4 text-primary">Контакты</h3>
-            <p className="text-lg text-muted-foreground">Свяжитесь с нами по любым вопросам</p>
+            <p className="text-lg text-primary font-semibold">Свяжитесь с нами по любым вопросам</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 mb-8">
