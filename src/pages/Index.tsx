@@ -197,9 +197,9 @@ const Index = () => {
               </div>
 
               <div className="flex flex-col items-start md:items-center gap-3 md:gap-4">
-                <Button size="lg" className="text-base md:text-xl px-6 md:px-12 py-4 md:py-6 bg-white text-primary hover:bg-white/90 border-4 border-primary w-auto" onClick={() => scrollToSection("about")}>
-                  Узнать больше о фестивале
-                  <Icon name="Heart" className="ml-2" size={20} />
+                <Button size="lg" className="text-base md:text-xl px-6 md:px-12 py-4 md:py-6 bg-white text-primary hover:bg-white/90 border-4 border-primary w-auto" onClick={() => scrollToSection("contacts")}>
+                  Контакты
+                  <Icon name="Phone" className="ml-2" size={20} />
                 </Button>
                 <Button size="lg" variant="outline" className="text-base md:text-xl px-6 md:px-12 py-4 md:py-6 border-4 border-white text-white hover:bg-white/20 w-auto" onClick={() => scrollToSection("program")}>
                   Смотреть программу
@@ -475,22 +475,87 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
+      <section id="contacts" className="py-16 px-4 bg-gradient-to-b from-white/60 to-primary/5">
+        <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4">Как добраться</h3>
+            <h3 className="text-4xl font-bold mb-4 text-primary">Контакты</h3>
+            <p className="text-lg text-muted-foreground">Свяжитесь с нами по любым вопросам</p>
           </div>
+          
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <Icon name="Handshake" className="text-primary" size={28} />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-xl mb-3 text-primary">По вопросам партнерства</h4>
+                    <div className="space-y-2">
+                      <a href="tel:+79242174080" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors">
+                        <Icon name="Phone" size={18} />
+                        <span>+7 (924) 217-40-80</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <Icon name="UserCircle" className="text-primary" size={28} />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-xl mb-3 text-primary">Администратор</h4>
+                    <div className="space-y-2">
+                      <a href="tel:+79140661026" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors">
+                        <Icon name="Phone" size={18} />
+                        <span>+7 (914) 066-10-26</span>
+                      </a>
+                      <a href="https://t.me/abministratorCSN" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors">
+                        <Icon name="Send" size={18} />
+                        <span>@abministratorCSN</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="mb-8 hover:shadow-lg transition-shadow">
+            <CardContent className="p-8">
+              <div className="flex items-start gap-4">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Icon name="Mail" className="text-primary" size={28} />
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-xl mb-3 text-primary">Электронная почта</h4>
+                  <a href="mailto:centrsemejnogonasledia@gmail.com" className="text-foreground hover:text-primary transition-colors break-all">
+                    centrsemejnogonasledia@gmail.com
+                  </a>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card>
             <CardContent className="p-8">
+              <div className="text-center mb-6">
+                <h4 className="text-2xl font-bold mb-2 text-primary">Как добраться</h4>
+              </div>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   <div>
                     <div className="flex items-start gap-3 mb-2">
                       <Icon name="MapPin" className="text-primary mt-1" size={24} />
                       <div>
-                        <h4 className="font-bold mb-1">Адрес</h4>
+                        <h5 className="font-bold mb-1">Адрес</h5>
                         <p className="text-muted-foreground">Кёрлинг-центр "Дом со льдом"</p>
-                        <p className="text-muted-foreground">ул. Тюменская, 18</p>
+                        <p className="text-muted-foreground">г. Владивосток, ул. Тюменская, 18</p>
                       </div>
                     </div>
                   </div>
@@ -498,7 +563,7 @@ const Index = () => {
                     <div className="flex items-start gap-3 mb-2">
                       <Icon name="Calendar" className="text-primary mt-1" size={24} />
                       <div>
-                        <h4 className="font-bold mb-1">Дата и время</h4>
+                        <h5 className="font-bold mb-1">Дата и время</h5>
                         <p className="text-muted-foreground">30 ноября 2025</p>
                         <p className="text-muted-foreground">12:00 - 17:00</p>
                       </div>
@@ -508,7 +573,7 @@ const Index = () => {
                     <div className="flex items-start gap-3 mb-2">
                       <Icon name="Ticket" className="text-primary mt-1" size={24} />
                       <div>
-                        <h4 className="font-bold mb-1">Вход</h4>
+                        <h5 className="font-bold mb-1">Вход</h5>
                         <p className="text-primary font-bold">Бесплатный</p>
                       </div>
                     </div>
