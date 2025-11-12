@@ -472,7 +472,7 @@ const Index = () => {
               <CardContent className="p-8">
                 <div className="text-center">
                   <img 
-                    src="https://cdn.poehali.dev/projects/b606a9e3-1bff-4282-b79d-f92c42f8a03c/files/d0690097-8fa6-4582-ba51-d4465b3272df.jpg" 
+                    src="https://cdn.poehali.dev/files/13e4fb92-fab7-468e-8c82-88d8e542645c.jpeg" 
                     alt="Дом со льдом" 
                     className="w-32 h-32 object-contain mx-auto mb-4"
                   />
