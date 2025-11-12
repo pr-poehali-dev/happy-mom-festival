@@ -350,7 +350,7 @@ const Index = () => {
                 <div className="w-32 h-32 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                   <Icon name="Trophy" className="text-primary-foreground" size={64} />
                 </div>
-                <h3 className="text-4xl font-bold mb-6 text-primary">Бесплатная кёрлинг-тренировка!</h3>
+                <h3 className="text-4xl font-bold mb-6 text-primary">Кёрлинг-тренировка!</h3>
                 
                 <div className="bg-accent/30 rounded-xl p-6 mb-6 text-left">
                   <h4 className="text-2xl font-bold mb-3 text-primary">Что такое кёрлинг?</h4>
