@@ -201,7 +201,7 @@ const Index = () => {
                   Контакты
                   <Icon name="Phone" className="ml-2" size={20} />
                 </Button>
-                <Button size="lg" variant="outline" className="text-base md:text-xl px-6 md:px-12 py-4 md:py-6 border-4 border-white text-white hover:bg-white/20 w-auto" onClick={() => scrollToSection("program")}>
+                <Button size="lg" className="text-base md:text-xl px-6 md:px-12 py-4 md:py-6 bg-primary text-primary-foreground hover:bg-primary/90 w-auto" onClick={() => scrollToSection("program")}>
                   Смотреть программу
                   <Icon name="ArrowRight" className="ml-2" size={20} />
                 </Button>
@@ -233,11 +233,11 @@ const Index = () => {
                 </div>
 
                 <p>
-                  На фестивале вы сможете попробовать что-то впервые: разрисовать <strong>семейную ёлочную игрушку</strong>, 
-                  нарисовать <strong>нейрографику</strong>, создать <strong>3D-картину</strong>, научиться <strong>вязать</strong> и многое другое!
+                  На фестивале вы сможете: <strong>создать семейное дерево</strong>, 
+                  <strong>принять участие в конкурсах</strong>, <strong>получить совет от стилиста и визажиста</strong> и многое другое!
                 </p>
 
-                <div className="grid md:grid-cols-3 gap-6 my-8">
+                <div className="grid md:grid-cols-2 gap-6 my-8">
                   <div className="bg-primary/10 rounded-xl p-6 text-center">
                     <Icon name="Gift" className="mx-auto mb-3 text-primary" size={40} />
                     <h4 className="font-bold text-lg mb-2">Призы</h4>
@@ -254,13 +254,7 @@ const Index = () => {
                     </p>
                   </div>
                   
-                  <div className="bg-primary/10 rounded-xl p-6 text-center">
-                    <Icon name="BadgePercent" className="mx-auto mb-3 text-primary" size={40} />
-                    <h4 className="font-bold text-lg mb-2">Скидки</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Специальный чек-лист со скидками от партнёров на всё, что нужно к празднику
-                    </p>
-                  </div>
+
                 </div>
 
                 <p className="text-xl text-center font-semibold text-primary pt-6">
@@ -436,21 +430,7 @@ const Index = () => {
               Чек-лист выгодных предложений для подготовки к Новому году
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {partners.map((partner, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all hover:scale-105">
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h4 className="font-bold text-lg mb-2">{partner.name}</h4>
-                      <p className="text-primary font-semibold">{partner.discount}</p>
-                    </div>
-                    <Icon name="Gift" className="text-primary" size={32} />
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+
           <div className="text-center mt-8">
             <Badge variant="outline" className="text-base px-6 py-3">
               🎁 Полный чек-лист получите на фестивале
