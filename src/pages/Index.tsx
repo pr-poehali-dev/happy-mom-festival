@@ -492,6 +492,17 @@ const Index = () => {
                 </div>
               </CardContent>
             </Card>
+
+            <Card className="hover:shadow-lg transition-all">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <div className="w-32 h-32 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Icon name="Baby" className="text-primary" size={48} />
+                  </div>
+                  <h4 className="font-bold text-lg">Грация мама<br/>магазин для мам и детей</h4>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
