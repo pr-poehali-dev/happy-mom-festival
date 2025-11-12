@@ -433,7 +433,7 @@ const Index = () => {
               <CardContent className="p-8">
                 <div className="text-center">
                   <img 
-                    src="https://cdn.poehali.dev/projects/b606a9e3-1bff-4282-b79d-f92c42f8a03c/files/d96ab333-718a-4e37-9d72-9a85946b6f0b.jpg" 
+                    src="https://cdn.poehali.dev/files/3e47104c-8941-42c9-a766-385b9451ca7c.jpg" 
                     alt="Warpoint VR арена" 
                     className="w-32 h-32 object-contain mx-auto mb-4"
                   />
