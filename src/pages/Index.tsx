@@ -51,11 +51,10 @@ const Index = () => {
   ];
 
   const workshops = [
-    { icon: "Box", title: "3D картина", time: "12:00 - 17:00" },
-    { icon: "Sparkles", title: "Ёлочная игрушка", time: "12:00 - 17:00" },
-    { icon: "Waves", title: "Нейрографика", time: "12:00 - 17:00" },
-    { icon: "Scissors", title: "Вязание", time: "12:00 - 17:00" },
-    { icon: "Users", title: "Семейный", time: "12:00 - 17:00" }
+    { icon: "TreeDeciduous", title: "Древо семьи", time: "12:00 - 17:00" },
+    { icon: "Mail", title: "Письмо маме", time: "12:00 - 17:00" },
+    { icon: "Shirt", title: "Стильная мама", time: "12:00 - 14:30" },
+    { icon: "Sparkles", title: "Мамин макияж", time: "12:00 - 14:30" }
   ];
 
   const programActivities = [
