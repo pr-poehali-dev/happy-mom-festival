@@ -426,15 +426,44 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold mb-4">Партнеры фестиваля</h3>
-            <p className="text-lg text-muted-foreground">
-              Чек-лист выгодных предложений для подготовки к Новому году
-            </p>
           </div>
 
-          <div className="text-center mt-8">
-            <Badge variant="outline" className="text-base px-6 py-3">
-              🎁 Полный чек-лист получите на фестивале
-            </Badge>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <Card className="hover:shadow-lg transition-all">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <Icon name="Gamepad2" className="mx-auto mb-4 text-primary" size={48} />
+                  <h4 className="font-bold text-xl">Warpoint VR арена</h4>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="hover:shadow-lg transition-all">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <Icon name="Gift" className="mx-auto mb-4 text-primary" size={48} />
+                  <h4 className="font-bold text-xl">TinyLand магазин игрушек</h4>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="hover:shadow-lg transition-all">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <Icon name="Users" className="mx-auto mb-4 text-primary" size={48} />
+                  <h4 className="font-bold text-lg">Информационный партнер<br/>Центр развития и поддержки многодетных семей ИНИЦИАТИВА</h4>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="hover:shadow-lg transition-all">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <Icon name="Home" className="mx-auto mb-4 text-primary" size={48} />
+                  <h4 className="font-bold text-lg">Информационный партнер<br/>Кёрлинг-центр «Дом со льдом»</h4>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
