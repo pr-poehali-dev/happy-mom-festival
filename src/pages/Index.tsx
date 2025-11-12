@@ -425,7 +425,7 @@ const Index = () => {
       <section id="partners" className="py-16 px-4 bg-white/60 backdrop-blur-sm">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4">Партнеры со скидками</h3>
+            <h3 className="text-4xl font-bold mb-4">Партнеры фестиваля</h3>
             <p className="text-lg text-muted-foreground">
               Чек-лист выгодных предложений для подготовки к Новому году
             </p>
