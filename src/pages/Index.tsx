@@ -499,7 +499,8 @@ const Index = () => {
                   <div className="w-32 h-32 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon name="Baby" className="text-primary" size={48} />
                   </div>
-                  <h4 className="font-bold text-lg">Грацио мама</h4>
+                  <h4 className="font-bold text-lg">Грацио мама
+Магазин для мам и детей</h4>
                 </div>
               </CardContent>
             </Card>
