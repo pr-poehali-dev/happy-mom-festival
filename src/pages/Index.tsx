@@ -446,7 +446,7 @@ const Index = () => {
               <CardContent className="p-8">
                 <div className="text-center">
                   <img 
-                    src="https://cdn.poehali.dev/projects/b606a9e3-1bff-4282-b79d-f92c42f8a03c/files/3380cbb3-692a-44ad-97d0-ea28b61638f5.jpg" 
+                    src="https://cdn.poehali.dev/projects/b606a9e3-1bff-4282-b79d-f92c42f8a03c/files/f0d99a85-8653-40a4-b2be-d99b233331ef.jpg" 
                     alt="TinyLand магазин игрушек" 
                     className="w-32 h-32 object-contain mx-auto mb-4"
                   />
