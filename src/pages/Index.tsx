@@ -479,6 +479,19 @@ const Index = () => {
                 </div>
               </CardContent>
             </Card>
+
+            <Card className="hover:shadow-lg transition-all">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <img 
+                    src="https://cdn.poehali.dev/files/7ac10ad4-f4f0-4fa5-911d-86c948ae26ed.jpeg" 
+                    alt="Приморская ферма альпак" 
+                    className="w-32 h-32 object-contain mx-auto mb-4"
+                  />
+                  <h4 className="font-bold text-lg">Приморская ферма альпак</h4>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
