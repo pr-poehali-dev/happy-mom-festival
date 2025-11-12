@@ -432,7 +432,11 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-all">
               <CardContent className="p-8">
                 <div className="text-center">
-                  <Icon name="Gamepad2" className="mx-auto mb-4 text-primary" size={48} />
+                  <img 
+                    src="https://cdn.poehali.dev/projects/b606a9e3-1bff-4282-b79d-f92c42f8a03c/files/d96ab333-718a-4e37-9d72-9a85946b6f0b.jpg" 
+                    alt="Warpoint VR арена" 
+                    className="w-32 h-32 object-contain mx-auto mb-4"
+                  />
                   <h4 className="font-bold text-xl">Warpoint VR арена</h4>
                 </div>
               </CardContent>
@@ -441,7 +445,11 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-all">
               <CardContent className="p-8">
                 <div className="text-center">
-                  <Icon name="Gift" className="mx-auto mb-4 text-primary" size={48} />
+                  <img 
+                    src="https://cdn.poehali.dev/projects/b606a9e3-1bff-4282-b79d-f92c42f8a03c/files/3380cbb3-692a-44ad-97d0-ea28b61638f5.jpg" 
+                    alt="TinyLand магазин игрушек" 
+                    className="w-32 h-32 object-contain mx-auto mb-4"
+                  />
                   <h4 className="font-bold text-xl">TinyLand магазин игрушек</h4>
                 </div>
               </CardContent>
@@ -450,7 +458,11 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-all">
               <CardContent className="p-8">
                 <div className="text-center">
-                  <Icon name="Users" className="mx-auto mb-4 text-primary" size={48} />
+                  <img 
+                    src="https://cdn.poehali.dev/files/b4ae2a5e-14d4-428e-adc3-bc6ab763a3dd.jpeg" 
+                    alt="Центр ИНИЦИАТИВА" 
+                    className="w-48 h-32 object-contain mx-auto mb-4"
+                  />
                   <h4 className="font-bold text-lg">Информационный партнер<br/>Центр развития и поддержки многодетных семей ИНИЦИАТИВА</h4>
                 </div>
               </CardContent>
@@ -459,7 +471,11 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-all">
               <CardContent className="p-8">
                 <div className="text-center">
-                  <Icon name="Home" className="mx-auto mb-4 text-primary" size={48} />
+                  <img 
+                    src="https://cdn.poehali.dev/projects/b606a9e3-1bff-4282-b79d-f92c42f8a03c/files/d0690097-8fa6-4582-ba51-d4465b3272df.jpg" 
+                    alt="Дом со льдом" 
+                    className="w-32 h-32 object-contain mx-auto mb-4"
+                  />
                   <h4 className="font-bold text-lg">Информационный партнер<br/>Кёрлинг-центр «Дом со льдом»</h4>
                 </div>
               </CardContent>
