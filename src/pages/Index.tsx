@@ -511,8 +511,20 @@ const Index = () => {
                   <div className="w-32 h-32 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon name="Baby" className="text-primary" size={48} />
                   </div>
-                  <h4 className="font-bold text-lg">Грацио мама
-Магазин для мам и детей</h4>
+                  <h4 className="font-bold text-lg">Грация мама<br/>Магазин для мам и детей</h4>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <img 
+                    src="https://cdn.poehali.dev/files/5cd12fd5-b4f8-4d2d-8ffe-fd74b8af3768.jpeg" 
+                    alt="Ферма ДВ" 
+                    className="w-32 h-32 object-contain mx-auto mb-4"
+                  />
+                  <h4 className="font-bold text-lg">Ферма ДВ</h4>
                 </div>
               </CardContent>
             </Card>
