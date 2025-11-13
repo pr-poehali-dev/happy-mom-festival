@@ -528,6 +528,19 @@ const Index = () => {
                 </div>
               </CardContent>
             </Card>
+
+            <Card className="hover:shadow-lg transition-all">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <img 
+                    src="https://cdn.poehali.dev/files/57f1fa31-3092-4338-9f7c-b2ab1e8be198.jpeg" 
+                    alt="Зоопарк Садгород" 
+                    className="w-32 h-32 object-contain mx-auto mb-4"
+                  />
+                  <h4 className="font-bold text-lg">Зоопарк на Садгороде</h4>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
