@@ -241,7 +241,7 @@ const Index = () => {
                   <strong>принять участие в конкурсах</strong>, <strong>получить совет от стилиста и визажиста</strong> и многое другое!
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6 my-8">
+                <div className="grid md:grid-cols-3 gap-6 my-8">
                   <div className="bg-primary/10 rounded-xl p-6 text-center">
                     <Icon name="Gift" className="mx-auto mb-3 text-primary" size={40} />
                     <h4 className="font-bold text-lg mb-2">Призы</h4>
@@ -258,6 +258,13 @@ const Index = () => {
                     </p>
                   </div>
                   
+                  <div className="bg-primary/10 rounded-xl p-6 text-center">
+                    <Icon name="UtensilsCrossed" className="mx-auto mb-3 text-primary" size={40} />
+                    <h4 className="font-bold text-lg mb-2">Русский стол</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Дегустация русских блюд
+                    </p>
+                  </div>
 
                 </div>
 
