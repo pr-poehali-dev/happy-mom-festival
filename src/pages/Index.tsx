@@ -708,7 +708,7 @@ const Index = () => {
       </section>
 
       <a
-        href="https://t.me/fahece_bot"
+        href="https://t.me/EMPR_mind_bot?start=utm_s"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 left-8 z-50 bg-[#0088cc] hover:bg-[#006699] text-white px-6 py-4 shadow-2xl transition-all duration-300 hover:scale-110 flex items-center gap-3 font-bold text-lg group rounded-sm mx-0"
