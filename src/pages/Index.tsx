@@ -418,7 +418,7 @@ const Index = () => {
                   <Button 
                     size="lg" 
                     className="text-sm md:text-xl px-4 md:px-12 py-3 md:py-6 bg-primary hover:bg-primary/90 text-primary-foreground w-auto"
-                    onClick={() => window.open('https://t.me/fahece_bot', '_blank')}
+                    onClick={() => window.open('https://t.me/EMPR_mind_bot?start=utm_s', '_blank')}
                   >
                     <Icon name="Send" className="mr-2 md:mr-3" size={18} />
                     <span className="whitespace-nowrap">Записаться на тренировку</span>
