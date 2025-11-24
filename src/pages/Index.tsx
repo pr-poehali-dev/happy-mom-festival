@@ -509,6 +509,19 @@ const Index = () => {
               <CardContent className="p-8">
                 <div className="text-center">
                   <img 
+                    src="https://cdn.poehali.dev/files/6ea97fb2-c4f4-4ec8-a5de-756e3c35f232.png" 
+                    alt="Мамины руки" 
+                    className="w-32 h-32 object-cover rounded-full mx-auto mb-4"
+                  />
+                  <h4 className="font-bold text-lg">Информационный партнер<br/>«Мамины руки»<br/>Семейная йога, психологическая помощь, мастер-классы</h4>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <img 
                     src="https://cdn.poehali.dev/files/7ac10ad4-f4f0-4fa5-911d-86c948ae26ed.jpeg" 
                     alt="Приморская ферма альпак" 
                     className="w-32 h-32 object-contain mx-auto mb-4"
