@@ -534,6 +534,20 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-all">
               <CardContent className="p-8">
                 <div className="text-center">
+                  <img 
+                    src="https://cdn.poehali.dev/files/261bae3d-e5be-43f4-8471-cc3e6ab04783.jpeg" 
+                    alt="Добрый Лев" 
+                    className="w-32 h-32 object-cover rounded-lg mx-auto mb-4"
+                  />
+                  <h4 className="font-bold text-lg">Информационный партнер<br/>«Добрый Лев»<br/>Благотворительное пространство для семей</h4>
+                  <p className="text-sm text-muted-foreground mt-2">Прием вещей, бесплатные раздачи и детский секонд-хенд</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all">
+              <CardContent className="p-8">
+                <div className="text-center">
                   <div className="w-32 h-32 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon name="Baby" className="text-primary" size={48} />
                   </div>
